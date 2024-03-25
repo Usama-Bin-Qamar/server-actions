@@ -2,8 +2,8 @@
 
 import { User } from "@/lib/model";
 import { connectToDB } from "@/lib/utils";
-import bcrypt from "bcrypt";
 import { revalidatePath } from "next/cache";
+import bcrypt from "bcrypt";
 
 export const requestUsername = async (formData: any) => {
   try {
