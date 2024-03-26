@@ -3,6 +3,7 @@ import {
   fetchUsers,
   requestUsername,
 } from "@/actions/serverActions";
+import Link from "next/link";
 import React from "react";
 
 const page = async () => {
@@ -99,6 +100,7 @@ const page = async () => {
               </form>
             </div>
           ))}
+          <Link href="/addusers">Add User</Link>
         </div>
       </div>
     </>
