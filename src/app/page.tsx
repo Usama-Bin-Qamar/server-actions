@@ -2,6 +2,7 @@ import React from "react";
 import { deleteUser, fetchUsers } from "@/actions/serverActions";
 import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
+import { GrCaretNext } from "react-icons/gr";
 
 const page = async () => {
   const data = await fetchUsers();
@@ -35,7 +36,12 @@ const page = async () => {
           </form>
         </div>
       ))}
-      <Link href="/addusers">Add User</Link>
+      <div className="flex flex-row">
+        <Link href="/addusers">
+          Add User
+          <GrCaretNext />
+        </Link>
+      </div>
     </div>
   );
 };
