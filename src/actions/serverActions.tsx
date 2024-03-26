@@ -21,13 +21,12 @@ export const requestUsername = async (formData: any) => {
 
     const user = await newUser.save();
     revalidatePath("/addusers");
-    console.log("🚀 ~ requestUsername ~ user:", user);
   } catch (error) {
     console.log("🚀 ~ requestUsername ~ error:", error);
   }
 };
 
-export const fetchProducts = async () => {
+export const fetchUsers = async () => {
   // console.log(q);
   // const regex = new RegExp(q, "i");
 
@@ -36,7 +35,6 @@ export const fetchProducts = async () => {
   try {
     connectToDB();
     const count = await User.find();
-    console.log("🚀 ~ fetchProducts ~ count:", count);
 
     return count;
   } catch (err) {

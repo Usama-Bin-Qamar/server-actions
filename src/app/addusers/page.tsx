@@ -1,19 +1,19 @@
 import {
   deleteUser,
-  fetchProducts,
+  fetchUsers,
   requestUsername,
 } from "@/actions/serverActions";
 import React from "react";
 
 const page = async () => {
-  const data = await fetchProducts();
+  const data = await fetchUsers();
 
   return (
     <>
       <div className="container mx-auto flex   items-center h-screen flex-col">
         <div className="lg:w-1/2 px-2 py-4 flex justify-center items-center m-4">
           <form action={requestUsername} className="max-w-md mx-auto  ">
-            <div className="relative z-0 w-full mb-5 group">
+            <div className="relative z-0 w-full mb-5 group ">
               <input
                 type="text"
                 name="username"
