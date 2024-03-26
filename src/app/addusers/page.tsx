@@ -100,7 +100,6 @@ const page = async () => {
               </form>
             </div>
           ))}
-          <Link href="/addusers">Add User</Link>
         </div>
       </div>
     </>

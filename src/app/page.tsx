@@ -1,6 +1,7 @@
 import React from "react";
 import { deleteUser, fetchUsers } from "@/actions/serverActions";
 import { redirect } from "next/dist/server/api-utils";
+import Link from "next/link";
 
 const page = async () => {
   const data = await fetchUsers();
@@ -34,6 +35,7 @@ const page = async () => {
           </form>
         </div>
       ))}
+      <Link href="/addusers">Add User</Link>
     </div>
   );
 };
